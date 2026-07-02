@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>Object-oriented JavaScript example</title>
   </head>
+
   <body>
     <h1>Objetos JavaScript</h1>
+
     <p>
       Um objeto JavaScript é uma coleção de propriedades, e uma propriedade é
       uma associação entre um nome (ou chave) e um valor. Um valor de
@@ -15,30 +17,72 @@
     </p>
 
     <p>
-      Os objetos javaScript são usados para armazenar dados e funcionalidades
-      relacionadas. Eles são criados usando a sintaxe de objeto literal, u a
-      classe.
+      Os objetos JavaScript são usados para armazenar dados e funcionalidades
+      relacionadas. Eles são criados usando a sintaxe de objeto literal ou
+      classes.
     </p>
 
-    <p>Exemplo de objeto literal:</p>
-    <pre><code>const pessoa= { 
-      nome: "João",
-      idade: 30,
-      saudacao: function() {
-      console.log("Olá, meu nome é " + this.nome);
-      }
-    };
+    <p><strong>Exemplo de objeto literal:</strong></p>
+
+    <pre><code>
+const pessoa = {
+    nome: "João",
+    idade: 30,
+    saudacao: function() {
+        console.log("Olá, meu nome é " + this.nome);
+    }
+};
+</code></pre>
+
+    <h2>Objeto Celular</h2>
+
+    <p>Exemplo de um objeto representando um celular com vários atributos.</p>
+
+    <pre><code>
+const celular = {
+    marca: "Samsung",
+    modelo: "Galaxy S24",
+    cor: "Preto",
+    armazenamento: "256GB",
+    bateria: "5000mAh",
+
+    ligar: function() {
+        console.log("O celular " + this.modelo + " está ligado!");
+    }
+};
 </code></pre>
 
     <script>
-      constpessoa = {
-        nome: "João"
+      const pessoa = {
+        nome: "João",
         idade: 30,
-      saudacao: function () {
+
+        saudacao: function () {
           console.log("Olá, meu nome é " + this.nome);
-        }
+        },
       };
-      pessoa.saudacao(); // Chama o método saudacao do objeto pessoa
+
+      pessoa.saudacao();
+
+      const celular = {
+        marca: "Samsung",
+        modelo: "Galaxy S24",
+        cor: "Preto",
+        armazenamento: "256GB",
+        bateria: "5000mAh",
+
+        ligar: function () {
+          console.log("O celular " + this.modelo + " está ligado!");
+        },
+      };
+
+      console.log("Marca:", celular.marca);
+      console.log("Modelo:", celular.modelo);
+      console.log("Cor:", celular.cor);
+      console.log("Armazenamento:", celular.armazenamento);
+      console.log("Bateria:", celular.bateria);
+
+      celular.ligar();
     </script>
   </body>
 </html>
